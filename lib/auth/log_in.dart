@@ -65,7 +65,7 @@ class _log_inState extends State<log_in> {
       } on FirebaseAuthException catch (e) {
         if (e.code == 'user-not-found') {
           //loading show to waiting only
-          Navigator.of(context).pop();
+          
           AwesomeDialog(
             context: context,
             dialogType: DialogType.info,
@@ -78,7 +78,7 @@ class _log_inState extends State<log_in> {
           print('No user found for that email.');
           print("==" * 20);
         } else if (e.code == 'wrong-password') {
-          Navigator.of(context).pop();
+          
           AwesomeDialog(
             context: context,
             dialogType: DialogType.info,
@@ -247,7 +247,7 @@ class _log_inState extends State<log_in> {
                         ),
                         ElevatedButton(
                           onPressed: () async {
-                            var credential = await done();
+                             credential = await done();
                             if (credential.user!.emailVerified == true) {
                               if (credential != null) {
                                 print(credential.user!.email);
