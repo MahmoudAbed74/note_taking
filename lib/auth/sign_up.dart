@@ -385,7 +385,7 @@ class _Sign_upState extends State<Sign_up> {
                         // ElevatedButton to sign up user
                         ElevatedButton(
                           onPressed: () async {
-                            var credential = await done();
+                            credential = await done();
                             Navigator.of(context).pushNamed("Home Page");
                             if (credential != null) {
                               FirebaseFirestore.instance
