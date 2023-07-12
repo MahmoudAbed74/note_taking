@@ -182,13 +182,7 @@ class List_notes extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Container(
-                      alignment: Alignment.bottomRight,
-                      child: Text(
-                        "${shownotes['time']}",
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                    )
+                    
                   ],
                 ),
               ),
